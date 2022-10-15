@@ -1,0 +1,123 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+body{
+    font-family: 'Poppins';
+    font-size: 15px;
+    
+  
+}
+
+header{
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto;
+    color: var(--VeryDarkBlue);
+    padding-top: 5rem;
+    
+}
+header h1{
+    margin-bottom: 0.9rem;
+}
+
+p{
+    color: var(--Cyan);
+    line-height: 1.5rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 3rem;
+    margin : 5rem 8% 0;
+}
+
+.card{
+    border-top: 0.5rem solid var(--Cyan);
+    border-radius: 5px;
+    box-shadow: 0 1rem 2rem 0.5rem #dedede;
+    padding: 2rem 3rem;
+    margin-bottom: 3rem;
+}
+
+.a{
+    border-top: 0.5rem solid var(--Red);
+}
+
+.b{
+    border-top: 0.5rem solid var(--Orange);
+}
+
+.c{
+    border-top: 0.5rem solid var(--Blue);
+}
+.image{
+    display: flex;
+    justify-content: right;
+    padding-top: 2rem;
+}
+
+.small{
+    font-weight: 200;
+}
+
+.medium{
+    font-weight: 400;
+}
+.big{
+    font-weight: 600;
+}
+
+
+@media screen and (min-width :700px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width :1240px){
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "start mid1 end"
+        "start mid2 end";       
+    }
+    
+    .z{
+        /* grid-row: span 2; */
+        align-self: center;
+        grid-area: start;
+    }
+    .a{
+        /* grid-row: 1/1;
+        grid-column: 2/2; */
+        grid-area: mid1;
+    }
+    .b{
+        /* grid-row: 2/2;
+        grid-column: 2/2; */
+        grid-area: mid2;
+    }
+    .c{
+        /* grid-row: span 2;
+        grid-column: 3/3 ; */
+        align-self: center;
+        grid-area: end;
+    }
+}
