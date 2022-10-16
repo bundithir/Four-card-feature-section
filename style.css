@@ -1,4 +1,3 @@
-@import url('https://fonts.google.com/specimen/Poppins');
 
 *{
     margin: 0;
@@ -19,13 +18,12 @@
 body{
     font-family: 'Poppins';
     font-size: 15px;
-    
-  
+    background-color: var(--VeryLightGray);
 }
 
 header{
     text-align: center;
-    max-width: 540px;
+    max-width: 545px;
     margin: 0 auto;
     color: var(--VeryDarkBlue);
     padding-top: 5rem;
@@ -36,7 +34,7 @@ header h1{
 }
 
 p{
-    color: var(--Cyan);
+    color: var(--GrayishBlue);
     line-height: 1.5rem;
 }
 
@@ -72,17 +70,25 @@ p{
     padding-top: 2rem;
 }
 
-.small{
+.semi{
     font-weight: 200;
 }
 
 .medium{
     font-weight: 400;
 }
-.big{
+.bold{
     font-weight: 600;
 }
 
+
+.lg{
+    font-size: 2rem;
+}
+
+.vrdb{
+    color: var(--VeryDarkBlue);
+}
 
 @media screen and (min-width :700px){
     .container{
